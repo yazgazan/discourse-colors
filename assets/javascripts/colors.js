@@ -24,7 +24,7 @@
     var re = /\[center\](.*?)\[\/center\]/;
     // Adjust text.
     var adjusted = text.replace(/\[center\]/gi, '<div style="text-align: center;">');
-    var adjusted = adjusted.replace(/\[\/center\]/gi, '</div>');
+    adjusted = adjusted.replace(/\[\/center\]/gi, '</div>');
 
     return adjusted;
   }
