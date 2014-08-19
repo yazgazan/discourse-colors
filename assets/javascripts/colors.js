@@ -5,7 +5,7 @@
     // Adjust text.
     var adjusted = text.replace(re, '');
 
-    text.replace(/\[\/color\]/gi, "");
+    adjusted = adjusted.replace(/\[\/color\]/gi, "");
 
     return adjusted;
   }
