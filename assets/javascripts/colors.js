@@ -3,9 +3,9 @@
     //Expression to find.
     var re = /\[color=\s*([a-zA-Z0-9-#]+)]/gi;
     // Adjust text.
-    var adjusted = text.replace(re, '<span style="color: $1;">');
+    var adjusted = text.replace(re, '');
 
-    text.replace(/\[\/color\]/gi, "</span>");
+    text.replace(/\[\/color\]/gi, "");
 
     return adjusted;
   }
@@ -14,7 +14,7 @@
     //Expression to find.
     var re = /\[img\](.*?)\[\/img\]/gi;
     // Adjust text.
-    var adjusted = text.replace(re, "<a href=\"$1\"><img src=\"$1\"></a>");
+    var adjusted = text.replace(re, '<a href="$1"><img src="$1" alt="$1"></a>');
 
     return adjusted;
   }
@@ -23,8 +23,8 @@
     //Expression to find.
     var re = /\[center\](.*?)\[\/center\]/;
     // Adjust text.
-    var adjusted = text.replace(/\[center\]/gi, '<div style="text-align: center;">');
-    adjusted = adjusted.replace(/\[\/center\]/gi, '</div>');
+    var adjusted = text.replace(/\[center\]/gi, '');
+    adjusted = adjusted.replace(/\[\/center\]/gi, '');
 
     return adjusted;
   }
